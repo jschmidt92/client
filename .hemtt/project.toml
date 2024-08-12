@@ -1,0 +1,13 @@
+name = "SOF Client"
+prefix = "sof_client"
+author = "SOF"
+mainprefix = "z"
+
+[files]
+include = [
+    "sof_client_version.json",
+    "*.paa",
+]
+
+[version]
+git_hash = 0 # Disabled

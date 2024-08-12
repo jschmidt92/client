@@ -1,0 +1,12 @@
+PREP(attack);
+PREP(defuse);
+PREP(destroy);
+PREP(handler);
+PREP(heartBeat);
+PREP(hostage);
+PREP(hvt);
+PREP(makeHostage);
+PREP(makeHVT);
+PREP(makeIED);
+PREP(makeObject);
+PREP(makeTarget);
