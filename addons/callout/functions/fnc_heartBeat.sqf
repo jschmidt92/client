@@ -20,6 +20,20 @@ switch (_type) do {
             player removeAction _actionId;
         }];
     };
+    case "hvt": {
+        waitUntil { sleep 1; !alive _entities };
+
+        player addAction ["Complete Callout", {
+            params ["_target", "_caller", "_actionId", "_arguments"];
+
+            ["Callout completed. Good job!", "blue-grey", 5] call EFUNC(misc,notify);
+
+            ["t1", "SUCCEEDED"] call BFUNC(taskSetState);
+            ["t1"] call BFUNC(deleteTask);
+            
+            player removeAction _actionId;
+        }];
+    };
     case "rd": {
         private _stopDistance = _args select 0;
 

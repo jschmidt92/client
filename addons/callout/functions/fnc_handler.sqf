@@ -23,7 +23,7 @@ GVAR(acceptCallouts) = false;
 
 private _thread = 0;
 
-private _callouts = [["dd", "Drug Deal"], ["rd", "Reckless Driver"], ["sa", "Suspicious Activity"], ["sf", "Shot(s) Fired"]];
+private _callouts = [["dd", "Drug Deal"], ["hvt", "High Value Target"], ["rd", "Reckless Driver"], ["sa", "Suspicious Activity"], ["sf", "Shot(s) Fired"]];
 private _index = floor (random (count _callouts));
 
 private _callout = _callouts select _index;
@@ -76,6 +76,9 @@ private _notifyAndAddActions = {
 switch (_calloutType) do {
     case "dd": {
         [_calloutName, "dd", _removeActions] call _notifyAndAddActions;
+    };
+    case "hvt": {
+        [_calloutName, "hvt", _removeActions] call _notifyAndAddActions;
     };
     case "rd": {
         [_calloutName, "rd", _removeActions] call _notifyAndAddActions;

@@ -45,5 +45,5 @@ private _index = GVAR(allIEDs) pushBackUnique _entity;
 
 // Countdown timer
 while { (_time > 0) && alive _entity } do {
-    [_entity, "ied", _time] spawn sof_client_contract_fnc_heartBeat;
+    [_entity, "ied", _time] spawn FUNC(heartBeat);
 };

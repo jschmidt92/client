@@ -93,7 +93,7 @@ if (_result == 1) then {
 	[_taskID, "FAILED"] call BFUNC(taskSetState);
 
 	if (_endFail) then {
-		["MissionFail", false, playerSide] remoteExecCall ["BIS_fnc_endMission"];
+		["MissionFail", false] remoteExecCall ["BIS_fnc_endMission", playerSide];
 	};
 
 	["deduct", _ratingFail] remoteExecCall ["sof_server_rating_fnc_handleRating", 2];
@@ -113,7 +113,7 @@ if (_result == 1) then {
 	[_taskID, "SUCCEEDED"] call BFUNC(taskSetState);
 
 	if (_endSuccess) then {
-		["MissionSuccess", true, playerSide] remoteExecCall ["BIS_fnc_endMission"];
+		["MissionSuccess", true] remoteExecCall ["BIS_fnc_endMission", playerSide];
 	};
 
 	["advance", _ratingSuccess] remoteExecCall ["sof_server_rating_fnc_handleRating", 2];

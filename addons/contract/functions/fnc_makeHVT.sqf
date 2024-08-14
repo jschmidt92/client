@@ -30,7 +30,7 @@ SETVAR(_entity,assignedTask,_taskID);
 private _index = GVAR(allHVTs) pushBackUnique _entity;
 
 if (alive _entity) then {
-	[_entity, "hvt"] spawn sof_client_contract_fnc_heartBeat;
+	[_entity, "hvt"] spawn FUNC(heartBeat);
 };
 
 // Log

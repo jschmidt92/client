@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [_entity, "entity_type", 30] spawn sof_client_contract_fnc_heartBeat;
+ * [_entity, "entity_type", 30] spawn FUNC(heartBeat);
  *
  * Public: Yes
  */

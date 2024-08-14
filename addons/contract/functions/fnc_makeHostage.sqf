@@ -42,5 +42,5 @@ private _index = GVAR(allHostages) pushBackUnique _entity;
 
 // Animation Loop
 if (alive _entity) then {
-	[_entity, "hostage"] spawn sof_client_contract_fnc_heartBeat;
+	[_entity, "hostage"] spawn FUNC(heartBeat);
 };
