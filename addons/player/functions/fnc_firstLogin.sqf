@@ -52,8 +52,8 @@ private _name = name _player;
 private _phoneNumber = GETVAR(_player,SOF_Phone_Number,_defaultPhoneNumber);
 private _phoneEmail = GETVAR(_player,SOF_Email,_defaultEmail);
 
-EGVAR(phone,SOF_AddressBook) pushBackUnique [_name, _phoneNumber, _phoneEmail];
-profileNamespace setVariable ["SOF_AddressBook", EGVAR(phone,SOF_AddressBook)];
+EGVAR(phone,addressbook) pushBackUnique [_name, _phoneNumber, _phoneEmail];
+SETVAR(profileNamespace,SOF_AddressBook,EGVAR(phone,addressbook));
 
 private _messages = [
 	"Welcome to your first day on the job. You have been issued a Pistol, 6 x 9mm Ammo, a Pistol Belt, and a small amount of RP and credit from OPSG. These are the only free things you will get for this identity, so save them, and use them wisely. You are responsible for all purchases going forward.",

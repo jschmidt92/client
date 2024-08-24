@@ -18,7 +18,9 @@ private _stretcher = (GVAR(occupancyTriggers) select { !(GETVAR(_x,isOccupied,fa
 private _stretcherPos = (getPosATL _stretcher) vectorAdd [0.05, -0.125, 0.45];
 private _stretcherDir = getDir _stretcher;
 
-if (_cash >= _totalCost || _bank >= _totalCost) exitWith {
+deleteVehicle _corpse;
+
+if (_cash >= _totalCost or _bank >= _totalCost) exitWith {
     [_unit, _totalCost] call FUNC(deductMedicalCost);
     _unit setUnitLoadout _loadout;
 };

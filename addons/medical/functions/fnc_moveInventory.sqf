@@ -83,6 +83,3 @@ private _nearHolders = _bodybag nearObjects ["WeaponHolderSimulated", 3];
         deleteVehicle _x;
     };
 } forEach _nearHolders;
-
-// Remove left-over corpse
-deleteVehicle _unit;
