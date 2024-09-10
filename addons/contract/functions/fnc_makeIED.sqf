@@ -18,7 +18,7 @@
  * Public: Yes
  */
 
-params [["_entity", nil, [objNull, 0, [], sideUnknown, grpnull, ""]], ["_taskID", "", [""]], ["_time", 0, [0]]];
+params [["_entity", nil, [objNull, 0, [], sideUnknown, grpNull, ""]], ["_taskID", "", [""]], ["_time", 0, [0]]];
 
 // Check if IED is defined
 // if (isNull _entity) exitWith {

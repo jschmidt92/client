@@ -17,7 +17,7 @@
  * Public: Yes
  */
 
-params [["_entity", nil, [objNull, 0, [], sideUnknown, grpnull, ""]], ["_taskID", "", [""]]];
+params [["_entity", nil, [objNull, 0, [], sideUnknown, grpNull, ""]], ["_taskID", "", [""]]];
 
 private _nearPlayers = [];
 

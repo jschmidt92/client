@@ -13,7 +13,7 @@ while {_active == "1"} do {
             _allDrones = _allDrones + [_x];
             _playerSelection lbAdd (_name);
         };
-    } foreach vehicles;
+    } forEach vehicles;
     missionNamespace setVariable [format ["%1%2", _playerSelection, "allDrones"], _allDrones];
     sleep 1;
     _active = missionNamespace getVariable [format ["%1%2", _processId, "programActive"], "0"];

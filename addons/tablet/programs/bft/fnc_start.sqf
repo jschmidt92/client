@@ -13,7 +13,7 @@ if (count _params > 2) then {
 _win = [_x, _y, _width, _height, _fileName] call sof_client_tablet_fnc_drawWindow;
 [(_win select 0), _processId, "processID"] call sof_client_os_fnc_addVarToCtrl;
 
-_pos = ctrlposition (_win select 0);
+_pos = ctrlPosition (_win select 0);
 _prog = ([_processId] call sof_client_os_fnc_getProgEntryById);
 _prog set [7, [(_pos select 0) / GUI_GRID_W + GUI_GRID_X, (_pos select 1) / GUI_GRID_H + GUI_GRID_Y]];
 
@@ -33,7 +33,7 @@ _map ctrlAddEventHandler ["Draw", {
 
             _this select 0 drawIcon [getText (configFile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon"), [0,0,0.7,0.7], getPos _x, 40, 40, getDir _x, _name, 1, 0.05, "TahomaB", "right"];
         };
-    } foreach playableUnits;
+    } forEach playableUnits;
 }];
 _map ctrlAddEventHandler ["MouseButtonDblClick", {
     //TODO: Find a way to add markers that can be deleted by user on map....... cannot find a solution right now..

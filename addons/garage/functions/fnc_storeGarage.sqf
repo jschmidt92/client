@@ -22,7 +22,7 @@ _itemList lbSetCurSel -1;
 _itemList2 lbSetCurSel -1;
 
 _veh spawn {
-	deleteVehicle (objectfromNetID _this);
+	deleteVehicle (objectFromNetId _this);
 	waitUntil { isNull (objectFromNetId _this) };
 
 	sleep 0.5;

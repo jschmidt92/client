@@ -20,7 +20,7 @@ _data pushBack ["storeWeapons", handgunWeapon player];
 	private _magClass = _x select 0;
 	private _ammoCount = _x select 1;
 	private _magLocation = _x select 4;
-	private _ammoFull = getNumber(configfile >> "CfgMagazines" >> _magClass >> "count");
+	private _ammoFull = getNumber(configFile >> "CfgMagazines" >> _magClass >> "count");
 
 	if(_magLocation in ["Uniform","Vest","Backpack"]) then {
 		_data pushBack ["storeMagazines", [_magClass, _ammoCount, _ammoFull, _magLocation]];

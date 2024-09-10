@@ -36,7 +36,7 @@ if (_data isEqualTo [""]) then {
     2 cutText ["No Save Found!", "PLAIN DOWN", 1];
     [player] spawn EFUNC(player,firstLogin);
 } else {
-    [format ["Welcome back %1. Your persistent locker, bank, cash and profile have been loaded.", name player, 5], "blue-grey"] call EFUNC(misc,notify);
+    [format ["Welcome back %1. Your persistent locker, bank, cash and profile have been loaded.", name player], 5, "blue-grey"] call EFUNC(misc,notify);
 
     for "_i" from 0 to (count _data - 1) step 2 do {
         private _key = _data select _i;

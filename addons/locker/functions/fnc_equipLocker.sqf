@@ -19,7 +19,7 @@ switch (_category) do {
 			playSound "FD_Finish_F";
 		} else {
 			_clear = false;
-			hintsilent "You don't have enough space left!";
+			hintSilent "You don't have enough space left!";
 			playSound "FD_CP_Not_Clear_F";
 		};
 	};
@@ -29,7 +29,7 @@ switch (_category) do {
 			playSound "FD_Finish_F";
 		} else {
 			_clear = false;
-			hintsilent "You don't have enough space left!";
+			hintSilent "You don't have enough space left!";
 			playSound "FD_CP_Not_Clear_F";
 		};
 	};
@@ -51,7 +51,7 @@ switch (_category) do {
 				};
 			} else {
 				_clear = false;
-				hintsilent "You don't have enough space left!";
+				hintSilent "You don't have enough space left!";
 				playSound "FD_CP_Not_Clear_F";
 			};
 		};

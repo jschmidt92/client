@@ -106,7 +106,7 @@ _allDrones = [];
         _allDrones = _allDrones + [_x];
         _playerSelection lbAdd (_name);
     };
-} foreach vehicles;
+} forEach vehicles;
 missionNamespace setVariable [format ["%1%2", _playerSelection, "allDrones"], _allDrones];
 
 _playerSelection lbSetCurSel 0;

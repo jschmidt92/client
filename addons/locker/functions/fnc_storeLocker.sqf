@@ -118,7 +118,7 @@ switch (_category) do {
 
 				{
 					if (_x isNotEqualTo []) then {
-						_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configfile >> "CfgMagazines" >> (_x select 0) >> "count")]];
+						_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "count")]];
 					};
 					true
 				} count [_mag, _mag2];
@@ -146,7 +146,7 @@ switch (_category) do {
 		} count ((getWeaponCargo uniformContainer player) call EFUNC(misc,cargoToPairs));
 
 		{
-			_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configfile >> "CfgMagazines" >> (_x select 0) >> "count")]];
+			_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "count")]];
 		} count (magazinesAmmoCargo uniformContainer player);
 
 		_locker pushBack [_category, _class];
@@ -171,7 +171,7 @@ switch (_category) do {
 		} count ((getWeaponCargo vestContainer player) call EFUNC(misc,cargoToPairs));
 
 		{
-			_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configfile >> "CfgMagazines" >> (_x select 0) >> "count")]];
+			_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "count")]];
 			true;
 		} count (magazinesAmmoCargo vestContainer player);
 
@@ -206,7 +206,7 @@ switch (_category) do {
 		} count ((getWeaponCargo backpackContainer player) call EFUNC(misc,cargoToPairs));
 
 		{
-			_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configfile >> "CfgMagazines" >> (_x select 0) >> "count")]];
+			_locker pushBack ["storeMagazines", [(_x select 0), (_x select 1), getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "count")]];
 		} count (magazinesAmmoCargo backpackContainer player);
 
 		_locker pushBack [_category, _class];

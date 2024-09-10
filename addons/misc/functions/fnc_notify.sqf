@@ -121,7 +121,7 @@ if (typeName _type == "ARRAY" || typeName _type == "OBJECT") then {
             _color = [0.376, 0.49, 0.545, _alpha];
         };
         default {
-            _color = [(profileNamespace getvariable ['GUI_BCG_RGB_R', 0.3843]), (profileNamespace getvariable ['GUI_BCG_RGB_G', 0.7019]), (profileNamespace getvariable ['GUI_BCG_RGB_B', 0.8862]), _alpha];
+            _color = [(profileNamespace getVariable ['GUI_BCG_RGB_R', 0.3843]), (profileNamespace getVariable ['GUI_BCG_RGB_G', 0.7019]), (profileNamespace getVariable ['GUI_BCG_RGB_B', 0.8862]), _alpha];
         };
     };
 };

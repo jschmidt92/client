@@ -17,7 +17,7 @@
  * Public: Yes
  */
 
-params [["_entity", nil, [objNull, 0, [], sideUnknown, grpnull, ""]], ["_taskID", "", [""]]];
+params [["_entity", nil, [objNull, 0, [], sideUnknown, grpNull, ""]], ["_taskID", "", [""]]];
 
 // Check if item is defined
 // if (isNull _entity) exitWith {

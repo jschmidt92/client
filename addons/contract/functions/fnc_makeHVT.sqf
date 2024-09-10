@@ -17,7 +17,7 @@
  * Public: Yes
  */
 
-params [["_entity", nil, [objNull, 0, [], sideUnknown, grpnull, ""]], ["_taskID", "", [""]]];
+params [["_entity", nil, [objNull, 0, [], sideUnknown, grpNull, ""]], ["_taskID", "", [""]]];
 
 // Check stuff
 // if (isNull _entity) exitWith {[COMPONENT_NAME, "ERROR", "Unit is not found", true] call sof_server_main_fnc_log};

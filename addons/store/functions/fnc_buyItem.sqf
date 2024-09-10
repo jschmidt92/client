@@ -43,7 +43,7 @@ if (GVAR(currentPaymentMethod) == "Company Funds" && !((getPlayerUID player) in 
 if (GVAR(currentPaymentMethod) == "Company Funds" && (getPlayerUID player) in companyGenerals) then {
     if (_itemPrice > _funds) exitWith { hintSilent "You do not have enough funds!" };
     if (_magazine) then {
-        _locker pushBack [_categoryType, [_classname, getNumber (configfile >> "CfgMagazines" >> _classname >> "count"), getNumber (configfile >> "CfgMagazines" >> _classname >> "count")]];
+        _locker pushBack [_categoryType, [_classname, getNumber (configFile >> "CfgMagazines" >> _classname >> "count"), getNumber (configFile >> "CfgMagazines" >> _classname >> "count")]];
     } else {
         _locker pushBack [_categoryType, _classname];
     };
@@ -57,7 +57,7 @@ if (GVAR(currentPaymentMethod) == "Company Funds" && (getPlayerUID player) in co
 } else {
     if (_itemPrice > _cash) exitWith { hintSilent "You do not have enough money!" };
     if (_magazine) then {
-        _locker pushBack [_categoryType, [_classname, getNumber (configfile >> "CfgMagazines" >> _classname >> "count"), getNumber (configfile >> "CfgMagazines" >> _classname >> "count")]];
+        _locker pushBack [_categoryType, [_classname, getNumber (configFile >> "CfgMagazines" >> _classname >> "count"), getNumber (configFile >> "CfgMagazines" >> _classname >> "count")]];
     } else {
         _locker pushBack [_categoryType, _classname];
     };

@@ -5,7 +5,7 @@ private _ctrl01 = _myDialog displayCtrl 202302;
 
 _myDialog displayRemoveEventHandler ["KeyDown", SOF_DeleteMsg];
 
-if (lbCurSel _ctrl01 == -1) exitwith {};
+if (lbCurSel _ctrl01 == -1) exitWith {};
 
 private _homeScreenBgBtns = [202202, 202203, 202204, 202205, 202206, 202207, 202208, 202209];
 private _homeScreenBtns = [202310, 202311, 202312, 202313, 202314, 202315, 202316, 202317, 202318];
