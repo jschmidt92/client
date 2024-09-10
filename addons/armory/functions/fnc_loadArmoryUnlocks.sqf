@@ -17,3 +17,5 @@ if (SOF_Armory_Type == 0) then {
 		[SOF_Armory_Box, _x] call AFUNC(arsenal,addVirtualItems);
 	} forEach GVAR(arsenalUnlocks);
 };
+
+player setVariable ["Armory_Unlocks", GVAR(arsenalUnlocks)];

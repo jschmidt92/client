@@ -32,8 +32,8 @@ if (isNil "sof_client_armory_garageUnlocks") then { sof_client_armory_garageUnlo
 
 private _data = [
 ["key", getPlayerUID player],
-["armory_unlocks", [sof_client_armory_arsenalUnlocks]],
-["garage_unlocks", [sof_client_armory_garageUnlocks]],
+["armory_unlocks", [EGVAR(armory,arsenalUnlocks)]],
+["garage_unlocks", [EGVAR(armory,garageUnlocks)]],
 ["locker", [player getVariable ["Locker", []]]],
 ["garage", [player getVariable ["Garage", []]]],
 ["cash", [player getVariable ["Cash", 0]]],
@@ -49,10 +49,8 @@ private _data = [
 ];
 
 if (vehicle player == player) then {
-    _data pushBack "currentWeapon";
-    _data pushBack [currentMuzzle player];
-    _data pushBack "stance";
-    _data pushBack [stance player];
+    _data pushBack ["currentWeapon", [currentMuzzle player]];
+    _data pushBack ["stance", [stance player]];
 };
 
 private _hashMap = createHashMapFromArray _data;

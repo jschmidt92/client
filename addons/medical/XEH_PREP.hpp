@@ -1,4 +1,3 @@
-PREP(contents);
 PREP(deductMedicalCost);
 PREP(heartBeat);
 PREP(initMedical);

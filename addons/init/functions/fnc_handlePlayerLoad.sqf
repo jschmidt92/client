@@ -48,56 +48,58 @@ if (_data isEqualTo [""]) then {
 
         switch (_key) do {
             case "reputation": {
-                SETVAR(player,Reputation,_value);
+                SETPVAR(player,Reputation,_value);
                 player addRating _value;
             };
             case "loadout": {
-                SETVAR(player,Loadout,_value);
+                SETPVAR(player,Loadout,_value);
                 player setUnitLoadout _value;
             };
             case "direction": {
-                SETVAR(player,Direction,_value);
+                SETPVAR(player,Direction,_value);
                 player setDir _value;
             };
             case "cash": {
-                SETVAR(player,Cash,_value);
+                SETPVAR(player,Cash,_value);
             };
             case "bank": {
-                SETVAR(player,Cash_Bank,_value);
+                SETPVAR(player,Cash_Bank,_value);
             };
             case "armory_unlocks": {
                 EGVAR(armory,arsenalUnlocks) = _value;
+                SETPVAR(player,Armory_Unlocks,_value);
             };
             case "garage_unlocks": {
                 EGVAR(armory,garageUnlocks) = _value;
+                SETPVAR(player,Garage_Unlocks,_value);
             };
             case "locker": {
-                SETVAR(player,Locker,_value);
+                SETPVAR(player,Locker,_value);
             };
             case "garage": {
-                SETVAR(player,Garage,_value);
+                SETPVAR(player,Garage,_value);
             };
             case "email": {
-                SETVAR(player,SOF_Email,_value);
+                SETPVAR(player,SOF_Email,_value);
             };
             case "number": {
-                SETVAR(player,SOF_Phone_Number,_value);
+                SETPVAR(player,SOF_Phone_Number,_value);
             };
             case "paygrade": {
-                SETVAR(player,Paygrade,_value);
+                SETPVAR(player,Paygrade,_value);
             };
             case "stance": {
-                SETVAR(player,Stance,_value);
+                SETPVAR(player,Stance,_value);
                 player playAction _value;
             };
             case "holster": {
-                SETVAR(player,SOF_HolsterWeapon,_value);
+                SETPVAR(player,SOF_HolsterWeapon,_value);
                 if (_value) then {
                     [player] call AFUNC(weaponselect,putWeaponAway);
                 };
             };
             case "position": {
-                SETVAR(player,Position,_value);
+                SETPVAR(player,Position,_value);
                 player setPosASL _value;
 
                 private _pAlt = ((getPosATLVisual player) select 2);
@@ -112,7 +114,7 @@ if (_data isEqualTo [""]) then {
     };
 
     if (needReload player == 1) then { reload player };
-    SETVAR(player,value_loadDone,true);
+    SETPVAR(player,value_loadDone,true);
 
     // ["listrng", GETVAR(player,SOF_Email,_defaultEmail), "", -1, [], "sof_client_phone_fnc_addOfflineEmail", "null", true] spawn dragonfly_db_fnc_addTask;
     ["listrng", GETVAR(player,SOF_Email,_defaultEmail), "", -1, [], "sof_client_phone_fnc_addOfflineEmail", netId player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];

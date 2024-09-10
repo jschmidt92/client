@@ -1,6 +1,6 @@
 class CfgVehicles {
-    class MapBoard_altis_F;
-    class ACE_bodyBagObject: MapBoard_altis_F {
+    class Land_Bodybag_01_black_F;
+    class SOF_bodyBagObject: Land_Bodybag_01_black_F {
         maximumLoad = 2000;
         transportMaxWeapons = 500;
         transportMaxMagazines = 2000;

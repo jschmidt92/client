@@ -27,10 +27,9 @@ _droppedWeapons pushBack (secondaryWeapon _unit);
 _droppedItems append (secondaryWeaponItems _unit);
 _droppedItems append (secondaryWeaponMagazine _unit);
 if (isPlayer _unit) then {
-    _droppedItems pushBack (goggles _unit); // possible work-around for losing facewear on death
+    _droppedItems pushBack (goggles _unit);
 };
 
-// Handgun only gets dropped if it's currently selected
 if (currentWeapon _unit == handgunWeapon _unit) then {
     _droppedWeapons pushBack (handgunWeapon _unit);
     _droppedItems append (handgunItems _unit);
