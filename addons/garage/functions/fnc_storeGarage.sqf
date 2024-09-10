@@ -14,7 +14,7 @@ private _veh = _data select 2;
 private _garage = GETVAR(player,Garage,[]);
 
 _garage pushBack [_category, _class];
-SETVAR(player,Garage,_garage);
+SETPVAR(player,Garage,_garage);
 
 lbClear _itemList;
 lbClear _itemList2;

@@ -18,4 +18,4 @@ if (SOF_Armory_Type == 0) then {
 	} forEach GVAR(arsenalUnlocks);
 };
 
-player setVariable ["Armory_Unlocks", GVAR(arsenalUnlocks)];
+player setVariable ["Armory_Unlocks", GVAR(arsenalUnlocks), true];

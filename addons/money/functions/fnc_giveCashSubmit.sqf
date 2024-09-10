@@ -39,7 +39,7 @@ if (_amount > 0) then {
 
 	private _newCash = _targetCash + _amount;
 	private _formattedAmount =  (_amount) call EFUNC(misc,formatNumber);
-	SETVAR(_target,Cash,_newCash);
+	SETPVAR(_target,Cash,_newCash);
 
 	["deduct", "Cash", _amount] remoteExecCall ["sof_server_money_fnc_handleMoney", 2];
 	[format ["You have received $%2 cash from %1", _player, _formattedAmount], "blue-grey", 3] remoteExecCall [QEFUNC(misc,notify), _target];

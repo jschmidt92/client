@@ -24,5 +24,5 @@ if (_SOF_HolsterWeapon == 1) then {
 	_SOF_HolsterWeapon = 1;
 };
 
-player setVariable ["SOF_Holster", _SOF_Holster, true];
-player setVariable ["SOF_HolsterWeapon", _SOF_HolsterWeapon, true];
+SETPVAR(player,SOF_Holster,_SOF_Holster);
+SETPVAR(player,SOF_HolsterWeapon,_SOF_HolsterWeapon);

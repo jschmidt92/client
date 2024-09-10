@@ -12,4 +12,4 @@ if (_data isEqualTo [""]) then {
 	[_x] call FUNC(addVirtualVehs);
 } forEach GVAR(garageUnlocks);
 
-player setVariable ["Garage_Unlocks", GVAR(garageUnlocks)];
+player setVariable ["Garage_Unlocks", GVAR(garageUnlocks), true];

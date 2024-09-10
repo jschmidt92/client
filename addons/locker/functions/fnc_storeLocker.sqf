@@ -17,7 +17,7 @@ switch (_category) do {
 		private _locker = GETVAR(player,Locker,[]);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		if (_class == (currentMuzzle player)) then {
 			player action ["SWITCHWEAPON", player, player, -1];
@@ -33,7 +33,7 @@ switch (_category) do {
 		private _locker = GETVAR(player,Locker,[]);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		private _temp = magazinesAmmoFull player;
 
@@ -96,7 +96,7 @@ switch (_category) do {
 		private _locker = GETVAR(player,Locker,[]);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		private _temp = weaponsItems player;
 
@@ -150,7 +150,7 @@ switch (_category) do {
 		} count (magazinesAmmoCargo uniformContainer player);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		removeUniform player;
 		playSound "FD_Finish_F";
@@ -176,7 +176,7 @@ switch (_category) do {
 		} count (magazinesAmmoCargo vestContainer player);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		removeVest player;
 		playSound "FD_Finish_F";
@@ -185,7 +185,7 @@ switch (_category) do {
 		private _locker = GETVAR(player,Locker,[]);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		removeHeadgear player;
 		playSound "FD_Finish_F";
@@ -210,7 +210,7 @@ switch (_category) do {
 		} count (magazinesAmmoCargo backpackContainer player);
 
 		_locker pushBack [_category, _class];
-		SETVAR(player,Locker,_locker);
+		SETPVAR(player,Locker,_locker);
 
 		removeBackpack player;
 		playSound "FD_Finish_F";

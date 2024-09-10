@@ -23,7 +23,7 @@ switch (_condition) do {
 
         if (_amount > companyFunds) exitWith { ["Not enough money in the company's account!", "warning", 3] call EFUNC(misc,notify) };
 
-        SETVAR(_target,Cash_Bank,_newBalance);
+        SETPVAR(_target,Cash_Bank,_newBalance);
 
         ["deduct", _amount] call FUNC(adminRefresh);
         ["deduct", _amount] remoteExecCall ["sof_server_money_fnc_handleFunds", 2];
@@ -37,7 +37,7 @@ switch (_condition) do {
             private _bank = GETVAR(_x,Cash_Bank,0);
             private _newBalance = _bank + 10000;
 
-            SETVAR(_x,Cash_Bank,_newBalance);
+            SETPVAR(_x,Cash_Bank,_newBalance);
         } count playableUnits;
 
         ["deduct", (10000 * _count)] call FUNC(adminRefresh);
@@ -49,7 +49,7 @@ switch (_condition) do {
 
         if (_amount > _bank) exitWith { ["Not enough money in the player's account!", "warning", 3] call EFUNC(misc,notify) };
 
-        SETVAR(_target,Cash_Bank,_newBalance);
+        SETPVAR(_target,Cash_Bank,_newBalance);
 
         ["advance", _amount] call FUNC(adminRefresh);
         ["advance", _amount] remoteExecCall ["sof_server_money_fnc_handleFunds", 2];
@@ -81,7 +81,7 @@ switch (_condition) do {
             private _bank = GETVAR(_player,Cash_Bank,0);
             private _newBalance = _bank + _bonus;
 
-            SETVAR(_player,Cash_Bank,_newBalance);
+            SETPVAR(_player,Cash_Bank,_newBalance);
         } count _paymentToDo;
 
         ["deduct", _totalPayment] call FUNC(adminRefresh);

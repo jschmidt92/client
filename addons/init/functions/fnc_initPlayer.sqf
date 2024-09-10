@@ -66,7 +66,7 @@ waitUntil { !(isNull (findDisplay 46)) };
 		case ((configFile >> "CfgPatches" >> "sof_client_main" >> "holsterKey") call BFUNC(getCfgData)): {
 			if ((currentWeapon player) != "" && !(GETVAR(player,SOF_HolsterWeapon,true))) then {
 				player action ["SwitchWeapon", player, player, 299];
-				SETVAR(player,SOF_HolsterWeapon,true);
+				SETPVAR(player,SOF_HolsterWeapon,true);
 			} else {
 				private _weapon = switch (true) do {
 					case ((primaryWeapon player) != ""): { primaryWeapon player };
@@ -75,7 +75,7 @@ waitUntil { !(isNull (findDisplay 46)) };
 					default {""};
 				};
 				if (_weapon != "") then { player selectWeapon _weapon };
-				SETVAR(player,SOF_HolsterWeapon,false);
+				SETPVAR(player,SOF_HolsterWeapon,false);
 			};
 			false;
 		};

@@ -72,7 +72,7 @@ if (_clear) then {
 	private _index = _locker findIf { _x isEqualTo _data };
 
 	_locker deleteAt _index;
-	SETVAR(player,Locker,_locker);
+	SETPVAR(player,Locker,_locker);
 
 	[] call FUNC(fetchLocker);
 	[] call FUNC(fetchPlayer);

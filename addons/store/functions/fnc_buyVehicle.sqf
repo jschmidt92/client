@@ -43,7 +43,7 @@ if (GVAR(currentPaymentMethod) == "Company Funds" && (getPlayerUID player) in co
     if (_vehiclePrice > _funds) exitWith { hintSilent "You do not have enough funds!" };
 
     _garage pushBack [_categoryType, _classname];
-    SETVAR(player,Garage,_garage);
+    SETPVAR(player,Garage,_garage);
 
     ["deduct", _vehiclePrice] remoteExecCall ["sof_server_money_fnc_handleFunds", 2];
     [_classname, _vehicleType] call EFUNC(armory,addVehArmory);
@@ -53,7 +53,7 @@ if (GVAR(currentPaymentMethod) == "Company Funds" && (getPlayerUID player) in co
     if (_vehiclePrice > _cash) exitWith { hintSilent "You do not have enough money!" };
 
     _garage pushBack [_categoryType, _classname];
-    SETVAR(player,Garage,_garage);
+    SETPVAR(player,Garage,_garage);
 
     ["deduct", "Cash", _vehiclePrice, player] remoteExecCall ["sof_server_money_fnc_handleMoney", 2];
     [_classname, _vehicleType] call EFUNC(armory,addVehArmory);

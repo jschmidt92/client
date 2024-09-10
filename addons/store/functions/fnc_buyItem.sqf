@@ -48,7 +48,7 @@ if (GVAR(currentPaymentMethod) == "Company Funds" && (getPlayerUID player) in co
         _locker pushBack [_categoryType, _classname];
     };
 
-    SETVAR(player,Locker,_locker);
+    SETPVAR(player,Locker,_locker);
 
     ["deduct", _itemPrice] remoteExecCall ["sof_server_money_fnc_handleFunds", 2];
     [_classname, _itemType] call EFUNC(armory,addItemArmory);
@@ -62,7 +62,7 @@ if (GVAR(currentPaymentMethod) == "Company Funds" && (getPlayerUID player) in co
         _locker pushBack [_categoryType, _classname];
     };
 
-    SETVAR(player,Locker,_locker);
+    SETPVAR(player,Locker,_locker);
 
     ["deduct", "Cash", _itemPrice, player] remoteExecCall ["sof_server_money_fnc_handleMoney", 2];
     [_classname, _itemType] call EFUNC(armory,addItemArmory);

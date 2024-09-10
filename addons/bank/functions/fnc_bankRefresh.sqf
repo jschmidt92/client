@@ -29,8 +29,8 @@ private _netWorth = _newBank + _newCash;
 private _formattedNewBank = _newBank call EFUNC(misc,formatNumber);
 private _formattedNewCash = _newCash call EFUNC(misc,formatNumber);
 
-SETVAR(player,Cash_Bank,_newBank);
-SETVAR(player,Cash,_newCash);
+SETPVAR(player,Cash_Bank,_newBank);
+SETPVAR(player,Cash,_newCash);
 
 SETVAR(profileNamespace,SOFPlayerNet,_netWorth);
 

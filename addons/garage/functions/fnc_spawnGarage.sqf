@@ -15,7 +15,7 @@ private _locations = (missionConfigFile >> "SOF_CfgGarages" >> "locations") call
 {
 	if ((_x select 0) == _category) then {
 		private _veh = createVehicle [_class, (_x select 1)];
-		SETVAR(_veh,Garage,_category);
+		SETPVAR(_veh,Garage,_category);
 		_veh setDir (_x select 2);
 		//[_veh, (_x select 2)] remoteExec ["setDir"];
 	};
@@ -30,7 +30,7 @@ private _garage = GETVAR(player,Garage,[]);
 private _index = _garage findIf { _x isEqualTo _data };
 
 _garage deleteAt _index;
-SETVAR(player,Garage,_garage);
+SETPVAR(player,Garage,_garage);
 
 [] call FUNC(fetchGarage);
 [] call FUNC(fetchVehicle);

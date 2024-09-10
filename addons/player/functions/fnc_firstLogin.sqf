@@ -38,15 +38,15 @@ _player setUnitLoadout [[],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""
 _player action ["SwitchWeapon", _player, _player, -1];
 _player addRating 500;
 
-SETVAR(_player,Cash_Bank,2000);
-SETVAR(_player,SOF_HolsterWeapon,true);
-SETVAR(_player,PayGrade,_defaultPaygrade);
+SETPVAR(_player,Cash_Bank,2000);
+SETPVAR(_player,SOF_HolsterWeapon,true);
+SETPVAR(_player,PayGrade,_defaultPaygrade);
 
 private _number = "0160" + (_uid select [count (toArray _uid) - 6, 6]);
 private _email = _number + "@spearnet.mil";
 
-SETVAR(_player,SOF_Phone_Number,_number);
-SETVAR(_player,SOF_Email,_email);
+SETPVAR(_player,SOF_Phone_Number,_number);
+SETPVAR(_player,SOF_Email,_email);
 
 private _name = name _player;
 private _phoneNumber = GETVAR(_player,SOF_Phone_Number,_defaultPhoneNumber);

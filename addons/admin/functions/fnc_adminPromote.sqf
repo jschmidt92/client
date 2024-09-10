@@ -21,10 +21,10 @@ if ((isNil {_data})) exitWith { hintSilent "You did not select a player!" };
 
 switch (_condition) do {
 	case ("promote"): {
-		SETVAR(_target,PayGrade,_paygrade)
+		SETPVAR(_target,PayGrade,_paygrade)
 	};
 	case ("demote"): {
-		SETVAR(_target,PayGrade,_paygrade)
+		SETPVAR(_target,PayGrade,_paygrade)
 	};
 };
 

@@ -7,5 +7,5 @@ private _selectedAccount = ["Cash", "Cash_Bank"] select (_preferredAccount >= _t
 private _accountBalance = _unit getVariable _selectedAccount;
 private _newBalance = _accountBalance - _totalCost;
 
-_unit setVariable [_selectedAccount, _newBalance];
+SETPVAR(_unit,_selectedAccount,_newBalance);
 [format ["Medical Services: %1 credited for treatment and recovery.", _totalCost], "blue-grey", 5] call EFUNC(misc,notify);
