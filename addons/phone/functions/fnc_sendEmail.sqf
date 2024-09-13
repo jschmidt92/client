@@ -13,5 +13,5 @@ private _pEmail = GETVAR(player,SOF_Email,_defaultEmail);
 	};
 } forEach playableUnits;
 
-// ["listadd", _email, "", -1, [_pEmail, _msg]], "sof_server_phone_fnc_addEmail", "null", false] spawn dragonfly_db_fnc_addTask;
-["listadd", _email, "", -1, [_pEmail, _msg], "", "null", false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["listadd", _email, "", -1, [_pEmail, _msg]], "sof_server_phone_fnc_addEmail", false] spawn dragonfly_db_fnc_addTask;
+["listadd", _email, "", -1, [_pEmail, _msg], "", false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];

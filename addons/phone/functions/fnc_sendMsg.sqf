@@ -13,5 +13,5 @@ private _pNumber = GETVAR(player,SOF_Phone_Number,_defaultPhoneNumber);
 	};
 } forEach playableUnits;
 
-// ["listadd", _number, "", -1, [_pNumber, _msg], "", "null", false] spawn dragonfly_db_fnc_addTask;
-["listadd", _number, "", -1, [_pNumber, _msg], "", "null", false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["listadd", _number, "", -1, [_pNumber, _msg], "", false] spawn dragonfly_db_fnc_addTask;
+["listadd", _number, "", -1, [_pNumber, _msg], "", false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];

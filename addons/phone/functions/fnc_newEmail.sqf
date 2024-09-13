@@ -14,5 +14,5 @@ playSound "SOF_newMsg";
 uiSleep 1;
 
 // [player getVariable ["SOF_Email", "unknown@spearnet.mil"], player, "sof_client_phone_fnc_addEmail", true] remoteExec ["db_fnc_listload", 2, false];
-// ["listrng", player getVariable ["SOF_Email", "unknown@spearnet.mil"], "", -1, [], "sof_client_phone_fnc_addEmail", "null", true] spawn dragonfly_db_fnc_addTask;
-["listrng", player getVariable ["SOF_Email", "unknown@spearnet.mil"], "", -1, [], "sof_client_phone_fnc_addEmail", netId player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["listrng", player getVariable ["SOF_Email", "unknown@spearnet.mil"], "", -1, [], "sof_client_phone_fnc_addEmail", true] spawn dragonfly_db_fnc_addTask;
+["listrng", player getVariable ["SOF_Email", "unknown@spearnet.mil"], "", -1, [], "sof_client_phone_fnc_addEmail", true, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];

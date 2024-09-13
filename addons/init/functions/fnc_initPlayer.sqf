@@ -45,8 +45,8 @@ cutText ["Loading In...", "BLACK", 1];
 
 waitUntil { GETVAR(player,value_armoryDone,false) };
 
-// ["hgetall", "", "", -1, [], "sof_client_init_fnc_handlePlayerLoad", "null", true] spawn dragonfly_db_fnc_addTask;
-["hgetallid", getPlayerUID player, "", -1, [], "sof_client_init_fnc_handlePlayerLoad", netId player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["hgetall", "", "", -1, [], "sof_client_init_fnc_handlePlayerLoad", true] spawn dragonfly_db_fnc_addTask;
+["hgetallid", getPlayerUID player, "", -1, [], "sof_client_init_fnc_handlePlayerLoad", true, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 
 [] spawn FUNC(playerSaveLoop);
 [] spawn EFUNC(interaction,initInteraction);

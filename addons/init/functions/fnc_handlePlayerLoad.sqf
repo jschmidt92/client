@@ -36,7 +36,7 @@ if (_data isEqualTo [""]) then {
     2 cutText ["No Save Found!", "PLAIN DOWN", 1];
     [player] spawn EFUNC(player,firstLogin);
 } else {
-    [format ["Welcome back %1. Your persistent locker, bank, cash and profile have been loaded.", name player], 5, "blue-grey"] call EFUNC(misc,notify);
+    [format ["Welcome back %1. Your persistent locker, bank, cash and profile have been loaded.", name player], "blue-grey", 5] call EFUNC(misc,notify);
 
     for "_i" from 0 to (count _data - 1) step 2 do {
         private _key = _data select _i;
@@ -116,9 +116,9 @@ if (_data isEqualTo [""]) then {
     if (needReload player == 1) then { reload player };
     SETPVAR(player,value_loadDone,true);
 
-    // ["listrng", GETVAR(player,SOF_Email,_defaultEmail), "", -1, [], "sof_client_phone_fnc_addOfflineEmail", "null", true] spawn dragonfly_db_fnc_addTask;
-    ["listrng", GETVAR(player,SOF_Email,_defaultEmail), "", -1, [], "sof_client_phone_fnc_addOfflineEmail", netId player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+    // ["listrng", GETVAR(player,SOF_Email,_defaultEmail), "", -1, [], "sof_client_phone_fnc_addOfflineEmail", true] spawn dragonfly_db_fnc_addTask;
+    ["listrng", GETVAR(player,SOF_Email,_defaultEmail), "", -1, [], "sof_client_phone_fnc_addOfflineEmail", true, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 
-    // ["listrng", GETVAR(player,SOF_Phone_Number,_defaultPhoneNumber), "", -1, [], "sof_client_phone_fnc_addOfflineMsg", "null", true] spawn dragonfly_db_fnc_addTask;
-    ["listrng", GETVAR(player,SOF_Phone_Number,_defaultPhoneNumber), "", -1, [], "sof_client_phone_fnc_addOfflineMsg", netId player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+    // ["listrng", GETVAR(player,SOF_Phone_Number,_defaultPhoneNumber), "", -1, [], "sof_client_phone_fnc_addOfflineMsg", true] spawn dragonfly_db_fnc_addTask;
+    ["listrng", GETVAR(player,SOF_Phone_Number,_defaultPhoneNumber), "", -1, [], "sof_client_phone_fnc_addOfflineMsg", true, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 };

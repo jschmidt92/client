@@ -29,7 +29,7 @@
  * Public: Yes
  */
 
-params [["_text", "", [""]], ["_type", "default", ["", [], {}]], ["_speed", 10, [10]]];
+params [["_text", "", [""]], ["_type", "default", [objNull, "", [], {}]], ["_speed", 10, [0]]];
 
 if (isDedicated || !hasInterface) exitWith {};
 if (isNil "open_notifications") then { open_notifications = []; };

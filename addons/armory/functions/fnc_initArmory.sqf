@@ -33,13 +33,13 @@ switch (SOF_PDB_Mode) do {
 		_handler = 0 spawn {
 			waitUntil { value_serverDone };
 
-			// ["hget", "", "armory_unlocks", -1, [], "sof_client_armory_fnc_loadArmoryUnlocks", "null", false] spawn dragonfly_db_fnc_addTask;
-			["hgetid", getPlayerUID player, "armory_unlocks", -1, [], "sof_client_armory_fnc_loadArmoryUnlocks", netId player, false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+			// ["hget", "", "armory_unlocks", -1, [], "sof_client_armory_fnc_loadArmoryUnlocks", false] spawn dragonfly_db_fnc_addTask;
+			["hgetid", getPlayerUID player, "armory_unlocks", -1, [], "sof_client_armory_fnc_loadArmoryUnlocks", false, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 
 			uiSleep 1;
 
-			// ["hget", "", "garage_unlocks", -1, [], "sof_client_armory_fnc_loadGarageUnlocks", "null", false] spawn dragonfly_db_fnc_addTask;
-			["hgetid", getPlayerUID player, "garage_unlocks", -1, [], "sof_client_armory_fnc_loadGarageUnlocks", netId player, false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+			// ["hget", "", "garage_unlocks", -1, [], "sof_client_armory_fnc_loadGarageUnlocks", false] spawn dragonfly_db_fnc_addTask;
+			["hgetid", getPlayerUID player, "garage_unlocks", -1, [], "sof_client_armory_fnc_loadGarageUnlocks", false, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 
 			SETVAR(player,value_armoryDone,true);
 		};

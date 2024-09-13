@@ -63,16 +63,16 @@ private _messages = [
 private _welcomeEmail = format ["Welcome to your first day on the job. You have been issued a phone with a new number of %1 and an email address of %2", _number, _email];
 
 ["Field Cmdr", _welcomeEmail] spawn EFUNC(phone,newEmail);
-// ["listadd", _phoneEmail, "", -1, ["Field Cmdr <fieldCmdr@spearnet.mil>", "Job Orientation", _welcomeEmail], "sof_server_phone_fnc_addEmail", "null", false] spawn dragonfly_db_fnc_addTask;
-// ["listadd", _phoneEmail, "", -1, ["Field Cmdr <fieldCmdr@spearnet.mil>", "Job Orientation", _welcomeEmail], "sof_server_phone_fnc_addEmail", netId _player, false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["listadd", _phoneEmail, "", -1, ["Field Cmdr <fieldCmdr@spearnet.mil>", "Job Orientation", _welcomeEmail], "sof_server_phone_fnc_addEmail", false] spawn dragonfly_db_fnc_addTask;
+// ["listadd", _phoneEmail, "", -1, ["Field Cmdr <fieldCmdr@spearnet.mil>", "Job Orientation", _welcomeEmail], "sof_server_phone_fnc_addEmail", false, netId _player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 [_phoneEmail, ["Field Cmdr <fieldCmdr@spearnet.mil>", "Job Orientation", _welcomeEmail]] remoteExec ["sof_server_phone_fnc_addEmail", 2, false];
 
 uiSleep 1;
 
 {
 	["Field Cmdr", _x] spawn EFUNC(phone,newMsg);
-	// ["listadd", _phoneNumber, "", -1, ["Field Cmdr", _x], "", "null", false] spawn dragonfly_db_fnc_addTask;
-	// ["listadd", _phoneNumber, "", -1, ["Field Cmdr", _x], "", netId _player, false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+	// ["listadd", _phoneNumber, "", -1, ["Field Cmdr", _x], "", false] spawn dragonfly_db_fnc_addTask;
+	// ["listadd", _phoneNumber, "", -1, ["Field Cmdr", _x], "", false, netId _player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 	[_phoneNumber, ["Field Cmdr", _x]] remoteExec ["sof_server_phone_fnc_addMsg", 2, false];
 } forEach _messages;
 
@@ -106,9 +106,9 @@ uiSleep 1;
 SETVAR(_player,value_loadDone,true);
 
 uiSleep 1;
-// ["listrng", _phoneEmail, "", -1, [], "sof_client_phone_fnc_addEmail", netId _player, true] spawn dragonfly_db_fnc_addTask;
-["listrng", _phoneEmail, "", -1, [], "sof_client_phone_fnc_addEmail", netId _player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["listrng", _phoneEmail, "", -1, [], "sof_client_phone_fnc_addEmail", true, netId _player] spawn dragonfly_db_fnc_addTask;
+["listrng", _phoneEmail, "", -1, [], "sof_client_phone_fnc_addEmail", true, netId _player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
 
 uiSleep 1;
-// ["listrng", _phoneNumber, "", -1, [], "sof_client_phone_fnc_addMsg", netId _player, true] spawn dragonfly_db_fnc_addTask;
-["listrng", _phoneNumber, "", -1, [], "sof_client_phone_fnc_addMsg", netId _player, true] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["listrng", _phoneNumber, "", -1, [], "sof_client_phone_fnc_addMsg", true, netId _player] spawn dragonfly_db_fnc_addTask;
+["listrng", _phoneNumber, "", -1, [], "sof_client_phone_fnc_addMsg", true, netId _player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];

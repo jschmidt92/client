@@ -53,5 +53,5 @@ if (vehicle player == player) then {
     _data pushBack [stance player];
 };
 
-// ["hsetBulk", "", "", -1, _data, "", "null", false] spawn dragonfly_db_fnc_addTask;
-["hsetidbulk", "", "", -1, _data, "", netId player, false] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
+// ["hsetBulk", "", "", -1, _data, "", false] spawn dragonfly_db_fnc_addTask;
+["hsetidbulk", "", "", -1, _data, "", false, netId player] remoteExec ["dragonfly_db_fnc_addTask", 2, false];
