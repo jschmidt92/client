@@ -1,14 +1,11 @@
 <p align="center">
 	<!-- <img src="https://raw.githubusercontent.com/jschmidt92/sof-launcher/master/images/logo.png"> -->
 	<a href="https://github.com/jschmidt92/client/releases/latest">
-		<img src="https://img.shields.io/github/v/release/jschmidt92/client?label=latest%20release" alt="latest-release">
-	</a>
-		<a href="https://github.com/jschmidt92/client/issues">
-		<img src="https://img.shields.io/github/issues/jschmidt92/client" alt="open-issues">
-	</a>
+		<img src="https://img.shields.io/github/v/release/jschmidt92/client?label=latest%C2%A0release" alt="latest-release" /></a>
+    <a href="https://github.com/jschmidt92/client/issues">
+		<img src="https://img.shields.io/github/issues/jschmidt92/client" alt="open-issues" /></a>
 	<a href="https://github.com/jschmidt92/client/actions/workflows/build.yml">
-		<img src="https://img.shields.io/github/actions/workflow/status/jschmidt92/client/build.yml?branch=master" alt="build-status">
-	</a>
+		<img src="https://img.shields.io/github/actions/workflow/status/jschmidt92/client/build.yml?branch=master" alt="build-status" /></a>
 </p>
 
 Welcome to **SOF's Client Mod**.
