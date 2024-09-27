@@ -6,35 +6,35 @@ class CfgVehicles {
 				displayName = "Give Cash";
 				condition = "isPlayer cursorObject && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_money_fnc_giveCash";
+                statement = QUOTE([cursorObject] spawn EFUNC(money,giveCash);
 				icon = "";
 			};
 			class addContact {
 				displayName = "Add Contact";
 				condition = "isPlayer cursorObject && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_phone_fnc_addContact";
+                statement = QUOTE([cursorObject] spawn EFUNC(phone,addContact);
 				icon = "";
 			};
 			class openATM {
 				displayName = "Access ATM";
 				condition = "!(isNil {cursorObject getVariable 'isBank'}) && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_bank_fnc_openBank";
+                statement = QUOTE([cursorObject] spawn EFUNC(bank,openBank);
 				icon = "";
 			};
 			class openCPOF {
 				displayName = "Access CPOF";
 				condition = "!(isNil {cursorObject getVariable 'isCPOF'}) && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_admin_fnc_openAdmin";
+                statement = QUOTE([cursorObject] spawn EFUNC(admin,openAdmin);
 				icon = "";
 			};
 			class openGarage {
 				displayName = "Open Garage";
 				condition = "!(isNil {cursorObject getVariable 'isGarage'}) && (player distance cursorObject) <= 5 && SOF_Team_Coord == 0";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_garage_fnc_openGarage";
+                statement = QUOTE([cursorObject] spawn EFUNC(garage,openGarage);
 				icon = "";
 			};
 			// class openCompanyGarage {
@@ -48,7 +48,7 @@ class CfgVehicles {
 				displayName = "Virtual Garage";
 				condition = "!(isNil {cursorObject getVariable 'isGarage'}) && (player distance cursorObject) <= 5 && SOF_VA_Enable == 1 && SOF_Team_Coord == 0";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_armory_fnc_openGarage";
+                statement = QUOTE([cursorObject] spawn EFUNC(armory,openGarage);
 				icon = "";
 			};
 			// class openVirtualCompanyGarage {
@@ -62,14 +62,14 @@ class CfgVehicles {
 				displayName = "Take Cash";
 				condition = "!(isNil {cursorObject getVariable 'isCash'}) && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_money_fnc_takeCash";
+                statement = QUOTE([cursorObject] spawn EFUNC(money,takeCash);
 				icon = "";
 			};
 			class openLocker {
 				displayName = "Open Locker";
 				condition = "!(isNil {cursorObject getVariable 'isLocker'}) && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_locker_fnc_openLocker";
+                statement = QUOTE([cursorObject] spawn EFUNC(locker,openLocker);
 				icon = "";
 			};
 			// class openCompanyLocker {
@@ -83,7 +83,7 @@ class CfgVehicles {
 				displayName = "Virtual Armory";
 				condition = "!(isNil {cursorObject getVariable 'isLocker'}) && (player distance cursorObject) <= 5 && SOF_VA_Enable == 1";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_armory_fnc_openArmory";
+                statement = QUOTE([cursorObject] spawn EFUNC(armory,openArmory);
 				icon = "";
 			};
 			// class openVirtualCompanyArmory {
@@ -97,7 +97,7 @@ class CfgVehicles {
 				displayName = "Access Store";
 				condition = "!(isNil {cursorObject getVariable 'isStore'}) && (player distance cursorObject) <= 5";
 				exceptions[] = {};
-				statement = "[cursorObject] spawn sof_client_store_fnc_openStore";
+                statement = QUOTE([cursorObject] spawn EFUNC(store,openStore);
 				icon = "";
 			};
 		};
@@ -121,7 +121,7 @@ class CfgVehicles {
                     displayName = "Open";
                     condition = "true";
                     exceptions[] = {};
-                    statement = "[] spawn sof_client_phone_fnc_openPhone";
+                    statement = QUOTE([] spawn EFUNC(phone,openPhone);
                 };
             };
         };

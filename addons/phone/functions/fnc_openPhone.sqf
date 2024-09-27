@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 
-private _defaultTheme = ["bg_dark01", "\@sof_mod\userconfig\backgrounds\bgdark_01.paa"];
+private _defaultTheme = ["bg_dark01", "\@sof\userconfig\backgrounds\bgdark_01.paa"];
 private _theme = GETVAR(profileNamespace,SOF_PhoneTheme,_defaultTheme);
 private _themeBackground = _theme select 1;
 
