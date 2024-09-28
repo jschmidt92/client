@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
