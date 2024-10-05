@@ -30,8 +30,10 @@
 
 private _data = [
 getPlayerUID player,
-"armory_unlocks", [EGVAR(armory,arsenalUnlocks)],
-"garage_unlocks", [EGVAR(armory,garageUnlocks)],
+// "armory_unlocks", [EGVAR(armory,arsenalUnlocks)],
+// "garage_unlocks", [EGVAR(armory,garageUnlocks)],
+"armory_unlocks", [player getVariable ["Armory_Unlocks", [[],[],[],[]]]],
+"garage_unlocks", [player getVariable ["Garage_Unlocks", [[],[],[],[],[],[]]]],
 "locker", [player getVariable ["Locker", []]],
 "garage", [player getVariable ["Garage", []]],
 "cash", [player getVariable ["Cash", 0]],

@@ -66,11 +66,11 @@ if (_data isEqualTo [""]) then {
                 SETPVAR(player,Cash_Bank,_value);
             };
             case "armory_unlocks": {
-                EGVAR(armory,arsenalUnlocks) = _value;
+                // EGVAR(armory,arsenalUnlocks) = _value;
                 SETPVAR(player,Armory_Unlocks,_value);
             };
             case "garage_unlocks": {
-                EGVAR(armory,garageUnlocks) = _value;
+                // EGVAR(armory,garageUnlocks) = _value;
                 SETPVAR(player,Garage_Unlocks,_value);
             };
             case "locker": {

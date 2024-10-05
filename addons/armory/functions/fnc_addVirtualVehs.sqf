@@ -2,12 +2,20 @@
 
 params [["_vehicles", [], [[]]]];
 
-private _cars = GVAR(garageUnlocks) select 0;
-private _armor = GVAR(garageUnlocks) select 1;
-private _helis = GVAR(garageUnlocks) select 2;
-private _planes = GVAR(garageUnlocks) select 3;
-private _naval = GVAR(garageUnlocks) select 4;
-private _static = GVAR(garageUnlocks) select 5;
+private _default = [[],[],[],[],[],[]];
+private _garage_unlocks = GETVAR(player,Garage_Unlocks,_default);
+// private _cars = GVAR(garageUnlocks) select 0;
+// private _armor = GVAR(garageUnlocks) select 1;
+// private _helis = GVAR(garageUnlocks) select 2;
+// private _planes = GVAR(garageUnlocks) select 3;
+// private _naval = GVAR(garageUnlocks) select 4;
+// private _static = GVAR(garageUnlocks) select 5;
+private _cars = _garage_unlocks select 0;
+private _armor = _garage_unlocks select 1;
+private _helis = _garage_unlocks select 2;
+private _planes = _garage_unlocks select 3;
+private _naval = _garage_unlocks select 4;
+private _static = _garage_unlocks select 5;
 
 {
 	switch true do {
