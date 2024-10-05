@@ -76,7 +76,7 @@ uiSleep 1;
 	[_phoneNumber, ["Field Cmdr", _x]] remoteExec ["sof_server_phone_fnc_addMsg", 2, false];
 } forEach _messages;
 
-private _arsenalUnlocks = [["SOF_Phone", 0], ["SOF_Tablet", 0], ["ItemCompass", 0], ["ItemGPS", 0], ["ItemMap", 0], ["ItemRadio", 0], ["ItemWatch", 0], ["U_BG_Guerrilla_6_1", 0], ["V_Rangemaster_belt", 0], ["hgun_P07_F", 1]];
+private _arsenalUnlocks = [["SOF_Phone", 0], ["SOF_Tablet", 0], ["ItemCompass", 0], ["ItemGPS", 0], ["ItemMap", 0], ["ItemRadio", 0], ["ItemWatch", 0], ["U_BG_Guerrilla_6_1", 0], ["V_Rangemaster_belt", 0], ["hgun_P07_F", 1], ["16Rnd_9x21_Mag", 2]];
 private _garageUnlocks = [["B_Quadbike_01_F", 0]];
 
 {
