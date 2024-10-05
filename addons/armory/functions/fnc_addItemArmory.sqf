@@ -7,6 +7,8 @@ private _arsenal_unlocks = GETVAR(player,Armory_Unlocks,_default);
 // private _index = (GVAR(arsenalUnlocks) select _type) pushBackUnique _class;
 private _index = (_arsenal_unlocks select _type) pushBackUnique _class;
 
+SETPVAR(player,Armory_Unlocks,_arsenal_unlocks);
+
 if (_index > - 1) then {
 	if (SOF_Armory_Type == 0) then {
 		[SOF_Armory_Box, [_class], false, true, 1, _type] call BFUNC(addVirtualItemCargo);

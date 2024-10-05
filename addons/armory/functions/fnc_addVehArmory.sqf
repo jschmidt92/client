@@ -7,6 +7,8 @@ private _garage_unlocks = GETVAR(player,Garage_Unlocks,_default);
 // private _index = (GVAR(garageUnlocks) select _type) pushBackUnique _class;
 private _index = (_garage_unlocks select _type) pushBackUnique _class;
 
+SETPVAR(player,Garage_Unlocks,_garage_unlocks);
+
 if (_index > - 1) then {
 	[[_class]] call FUNC(addVirtualVehs);
 };
